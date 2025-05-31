@@ -5,4 +5,4 @@
 node_modules/
 
 #json data files
-*.jsonl
+/data/*.jsonl
