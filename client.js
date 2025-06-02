@@ -7,7 +7,6 @@ require('dotenv').config();
 const SERVER_URL = process.env.SERVER_URL;
 const AUTH_SECRET = process.env.AUTH_SECRET;
 const EVENTS_FILE = process.env.STREAM_FILE;
-console.log('EVENTS_FILE: ', EVENTS_FILE);
 
 
 async function readFileAndSendEvents() {
@@ -39,7 +38,7 @@ async function readFileAndSendEvents() {
                 }
             }
             catch (error) {
-                console.error(`Error parsing JSON: ${error.message}`);
+                console.error(`Error parsing JSON: ${error?.response?.data?.error || error?.message}`);
                 continue;
             }
         }
