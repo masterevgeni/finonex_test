@@ -34,7 +34,7 @@ npm install
 2. AUTH_SECRET=<SET_YOUR>
 3. STREAM_FILE=data/events.jsonl
 4. SERVER_EVENTS=data/server_events.jsonl
-5. TEMP_SERVER_FILE=server_events_temp.jsonl
+5. TEMP_SERVER_FILE=data/server_events_temp.jsonl
 6. SERVER_PORT=<SET_YOUR>
 7. SERVER_MAX_FiLE_SIZE='10mb'
 8. DB_USER=<SET_YOUR>
@@ -82,13 +82,13 @@ This will process events stored by the server and update the database.
 ## File Structure
 
 ```
-etl-system/
+FINONEX_TEST/
 ├── server.js              # HTTP server with API endpoints
 ├── client.js              # Client that sends events to server
 ├── data_processor.js      # Processes events and updates database
 ├── db.sql                 # Database schema
 ├── package.json           # Node.js dependencies
 ├── README.md             # This file
-├── events.jsonl          # Input events file (create this)
-└── server_events.jsonl   # Events stored by server (auto-created)
+├── data/events.jsonl          # Input events file (create this)
+└── data/server_events.jsonl   # Events stored by server (auto-created)
 ```
